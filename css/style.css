@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+/* Container Styles */
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Navbar Styles */
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    font-size: 18px;
+}
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper >.left-side >div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.brand a {
+    text-decoration: none;
+}
+.nav-link-wrapper{
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+/* Items Styles */
+.portfolio-items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.portfolio-item-wrapper{
+    position: relative;
+}
+.portfolio-img-background {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 100px;
+}
+
+.logo-wrapper img{
+    width: 60%;
+    margin-bottom: 20px;
+}
+/* Needs to be more specific with selector */
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    font-weight: 700;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 700;
+    color: rgb(220, 250, 248);
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* About page Styles */
+.two-columns-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile-img-wrapper img{
+    width: 100%;
+}
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1{
+    color: crimson;
+}
+
+/* Media Querries */
+@media only screen  and (max-width:750px){
+    .portfolio-items-wrapper{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+}
